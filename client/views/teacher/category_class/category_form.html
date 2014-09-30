@@ -1,0 +1,56 @@
+<template name="categoryForm">
+	<div class="col-md-8">
+		<div class="row">
+			<div class="panel panel-primary">
+		      <div class="panel-heading">
+		        <h3 class="panel-title">Create Category</h3>
+		      </div>
+		      <div class="panel-body">
+		        <form class="main">			
+		        	<!-- <legend></legend> -->
+					<fieldset class="panel-content">
+		                <label>Title</label>
+		                <input type="text" placeholder="Test Title" name="categoryTitle" class="form-control">
+
+		                <label>Description</label>
+		                <textarea name="categoryDescription" class="form-control" rows="3"></textarea>
+		                <br/>
+
+		                <div class="col-md-6">
+		                	<input type="submit" value="Create Category" class=".submitCategory btn btn-primary btn-block">
+		                </div>
+		                <div class="col-md-6">
+		                	<a href="#" class="cancel btn btn-danger btn-block" >Cancel</a>
+		                </div>
+		                
+		                <!-- <input type="submit" value="Cancel" class=".cancel"> -->
+		                
+		            </fieldset>		 			
+				</form>
+		      </div>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="list-group">
+              <div class="list-group-item list-group-item-primary">
+              	  <h4 class="list-group-item-heading">All Categories</h4>
+              </div>
+              {{> categoryList}}
+              {{> categoryList}}
+              {{> categoryList}}
+              {{> categoryList}}
+              <!-- {{#each allCategories}}
+              	{{> categoryList}}
+              {{/each}} -->
+            </div>
+		</div>
+	    
+    </div>
+</template>
+
+<template name="categoryList">
+	<a href="#" class="list-group-item">
+	  	<h4 class="list-group-item-heading">Title</h4>
+	    <span class="list-group-item-text">Description</span>  	
+	</a>
+</template>
