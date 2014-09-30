@@ -47,27 +47,28 @@
 	        </div>
 	      </div>
 	      <div class="col-md-9">
-	      	<div class="panel panel-default">
+	      	<!-- <div class="panel panel-default">
               <div class="panel-heading">
                 <div class="panel-title">
-                	<ul class="nav nav-pills nav-justified">
-	                  <li><strong>Color Legend</strong></li>
-	                  <li><span class="label label-warning">Pending Tests</span></li>
-	                  <li><span class="label label-success">Completed Tests</span></li>
-	                  <li><span class="label label-danger">In-Progress Tests</span></li>
-	                </ul>
+	                  <strong>Color Legend</strong>
+	                  <span class="label label-warning">Pending Tests</span>
+	                  <span class="label label-success">Completed Tests</span>
+	                  <span class="label label-danger">In-Progress Tests</span>
                 </div>
               </div>
               <div class="panel-body">
                 {{> testDetailsView}}
               </div>
+            </div> -->
+
+            <div class="well">
+            	<strong>Color Legend</strong>
+	            <span class="label label-warning">Pending Tests</span>
+	            <span class="label label-success">Completed Tests</span>
+	            <span class="label label-danger">In-Progress Tests</span>
             </div>
 
-	      	<!-- <div class="row">
-              <div class="col-md-5">
-                
-              </div>
-            </div> -->
+            {{> testDetailsView}}
 
 	      	
 	      </div>
