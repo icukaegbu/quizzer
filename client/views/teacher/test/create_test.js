@@ -24,7 +24,7 @@ Template.createTest.events({
 				status: 'pending',  //every test starts off ith a pending status
 				bgColor: '',
 				category: category,
-				class: aclass
+				aclass: aclass
 			}
 
 			isSave = true;
