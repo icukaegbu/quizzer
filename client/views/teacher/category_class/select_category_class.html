@@ -1,0 +1,17 @@
+<template name="selectCategory">
+    <select name="class" class="selecter_3"  data-selecter-options='{"cover":"true"}'>
+    	<option value="N/A">None</option>
+    	{{#each selectCategory}}
+        	<option value="{{title}}">{{title}}</option>
+        {{/each}}
+    </select>
+</template>
+
+<template name="selectClass">
+    <select name="class" class="selecter_3"  data-selecter-options='{"cover":"true"}'>
+        <option value="N/A">None</option>
+    	{{#each selectClass}}
+        	<option value="{{title}}">{{title}}</option>
+        {{/each}}
+    </select>
+</template>
