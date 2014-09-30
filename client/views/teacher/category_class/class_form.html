@@ -6,18 +6,18 @@
 		        <h3 class="panel-title">Create Class</h3>
 		      </div>
 		      <div class="panel-body">
-		        <form class="main">			
+		        <form class="main" id="classForm">			
 		        	<!-- <legend></legend> -->
 					<fieldset class="panel-content">
 		                <label>Title</label>
-		                <input type="text" placeholder="Test Title" name="classTitle" class="form-control">
+		                <input type="text" placeholder="Test Title" name="title" class="form-control">
 
 		                <label>Description</label>
-		                <textarea name="classDescription" class="form-control" rows="3"></textarea>
+		                <textarea name="description" class="form-control" rows="3"></textarea>
 		                <br/>
 
 		                <div class="col-md-6">
-		                	<input type="submit" value="Create Class" class=".submitClass btn btn-warning btn-block">
+		                	<input type="submit" value="Create Class" class=".submit btn btn-warning btn-block">
 		                </div>
 		                <div class="col-md-6">
 		                	<a href="#" class="cancel btn btn-danger btn-block" >Cancel</a>
@@ -35,13 +35,9 @@
               <div class="list-group-item list-group-item-warning">
               	  <h4 class="list-group-item-heading">All Classes</h4>
               </div>
-              {{> classList}}
-              {{> classList}}
-              {{> classList}}
-              {{> classList}}
-              <!-- {{#each allCategories}}
+              {{#each classes}}
               	{{> classList}}
-              {{/each}} -->
+              {{/each}}
             </div>
 		</div>
 	    
@@ -50,7 +46,7 @@
 
 <template name="classList">
 	<a href="#" class="list-group-item">
-	  	<h4 class="list-group-item-heading">Title</h4>
-	    <span class="list-group-item-text">Description</span>  	
+	  	<h4 class="list-group-item-heading">{{title}}</h4>
+	    <span class="list-group-item-text">{{description}}</span>  	
 	</a>
 </template>
