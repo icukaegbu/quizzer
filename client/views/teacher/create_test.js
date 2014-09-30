@@ -9,9 +9,11 @@ Template.createTest.events({
 		var title = $(e.target).find("[name=title]").val();
 		var duration = $(e.target).find("[name=duration]").val();
 		var description = $(e.target).find("[name=description]").val();
+		var category = $(e.target).find("[name=select_category]").val();
+		var aclass = $(e.target).find("[name=select_class]").val();
+
 
 		//if any field is empty, dont save
-
 		if ( title && duration ){
 			//create an instance of the Test and save
 			test = {
@@ -20,7 +22,9 @@ Template.createTest.events({
 				description: description,
 				created: new Date().getTime(),
 				status: 'pending',  //every test starts off ith a pending status
-				bgColor: ''
+				bgColor: '',
+				category: category,
+				class: aclass
 			}
 
 			isSave = true;
@@ -34,6 +38,8 @@ Template.createTest.events({
       		$(e.target).find("[name=title]").val('');
 			$(e.target).find("[name=duration]").val('');
 			$(e.target).find("[name=description]").val('');
+			$(e.target).find("[name=select_category]").val('N/A');
+		    $(e.target).find("[name=select_class]").val('N/A');
 		}
 		else {
 			//display error notification
@@ -53,3 +59,19 @@ Template.createTest.events({
 
 });
 
+// Template.createTest.helpers({
+// 	getCategoryId: function (title) {
+// 		var id = Categories.find({title: title})._id;
+// 		console.log(id);
+
+// 		return id;
+// 	},
+
+// 	getClassId: function (title) {
+// 		var id = Classes.find({title: title})._id;
+// 		console.log(id);
+
+// 		return id;
+// 	}
+
+// });
