@@ -1,40 +1,7 @@
-<template name="dashboard">
+<template name="teacherDashboard">
   <!-- {{> loginMenu}} -->
 
-    <div class="container-fluid" id="dashboard">
-      <div class="row">
+  
 
-        <!-- {{> topicSidebar}} -->
-       
-        <div class="col-sm-9 col-md-10 main">
-          <h4 class="page-header alert alert-info">Dashboard</h4>
-
-          <!-- Button Toolbar -->
-          <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary" id="btnAddCard">
-                <span class="glyphicon glyphicon-plus"></span> Add Card
-              </button>
-              <button type="button" class="btn btn-danger hidden" id="btnHideCard">Hide Card</button> 
-              <!-- <button type="button" class="btn btn-danger">
-                <span class="glyphicon glyphicon-minus"></span> Delete Card
-              </button> -->
-            </div>
-            
-          </div> <!-- End Button Toolbar -->
-
-          <br/> 
-
-          <!-- Table Responsive -->
-          <div class="table-responsive well" id="cardList">
-            <div id="cardForm" class="hidden">
-              {{> addCard}}
-            </div>
-
-            {{> cardsList}}
-            
-          </div><!-- End Table Responsive -->
-        </div>
-      </div>
-    </div>
+    
 </template>
