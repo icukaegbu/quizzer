@@ -1,39 +1,39 @@
 <template name="takeTestItem">
-	<dd class="pos-right clearfix"> <!-- HAVE A ROTATE FUNCTION THAT IS CALLED ON pos-{{rotate}} THAT ROTATES OVER right and left  -->
+	<dd class="pos-{{getPosition}} clearfix"> <!-- HAVE A ROTATE FUNCTION THAT IS CALLED ON pos-{{rotate}} THAT ROTATES OVER right and left  -->
 	  <div class="circ"></div>
-	  <div class="time">Question No:</div>
+	  <div class="time">{{question_num}}:</div>
 	  <div class="events">
 		  <div class="pull-left">
 		  	  <!-- Icon that is toggled to show if a question has been answered or not -->
 			  <img class="events-object img-rounded" src="img/photo-1.jpg">
 		  </div>
 		  <div class="events-body">
-			  <h4 class="events-heading">Question</h4>
+			  <h4 class="events-heading">{{question}}</h4>
 			  <!-- <p></p> -->
 			  <ul>
 			  	<li>
 			  		<!-- bind id and value to option value  -->
 			  		<div class="radio">
-	                  <input type="radio" id="flat-radio-1" name="rad1">
-	                  <label for="flat-radio-1">default</label>
+	                  <input type="radio" id="{{optA}}" value="{{optA}}" name="rad1">
+	                  <label for="flat-radio-1">{{optA}}</label>
 	                </div>
 			  	</li>
 			  	<li>
 			  		<div class="radio">
-	                  <input type="radio" id="flat-radio-1" value="option1" name="rad1">
-	                  <label for="flat-radio-1">default</label>
+	                  <input type="radio" id="{{optB}}" value="{{optB}}" name="rad1">
+	                  <label for="flat-radio-1">{{optB}}</label>
 	                </div>
 			  	</li>
 			  	<li>
 			  		<div class="radio">
-	                  <input type="radio" id="flat-radio-1" name="rad1">
-	                  <label for="flat-radio-1">default</label>
+	                  <input type="radio" id="{{optC}}" value="{{optC}}" name="rad1">
+	                  <label for="flat-radio-1">{{optC}}</label>
 	                </div>
 			  	</li>
 			  	<li>
 			  		<div class="radio">
-	                  <input type="radio" id="flat-radio-1" name="rad1">
-	                  <label for="flat-radio-1">default</label>
+	                  <input type="radio" id="{{optD}}" value="{{optD}}" name="rad1">
+	                  <label for="flat-radio-1">{{optD}}</label>
 	                </div>
 			  	</li>
 			  </ul>

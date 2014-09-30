@@ -6,7 +6,9 @@
 			  <div class="timeline">
 				  <dl>
 					  <dt>Test Title</dt>
-					  {{> takeTestItem}}
+					  	{{#each questions}}
+					  		{{> takeTestItem}}
+					  	{{/each}}
 					  <!-- <dd class="pos-right clearfix">
 						  <div class="circ"></div>
 						  <div class="time">Apr 14</div>
