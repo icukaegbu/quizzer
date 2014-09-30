@@ -7,5 +7,5 @@ meteor-platform
 autopublish
 insecure
 iron:router
-mrt:flat-ui-less
+elie:bootflat
 
