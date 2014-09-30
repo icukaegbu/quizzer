@@ -1,5 +1,10 @@
 <template name="testDetailsViewItem">
 	<div class="col-md-3">
+		<div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>{{title}}</strong> <br/>
+          <span class="badge badge-primary">{{duration}} mins</span>
+        </div>
 		<!-- <li class="unit price-primary">
 			<div class="price-title">
 				<h5>{{title}}</h5>
@@ -18,10 +23,5 @@
 				<button type="button" class="btn btn-primary">Start Test</button>
 			</div>
 		</li> -->
-		<div class="alert alert-warning alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          <strong>{{title}}</strong> <br/>
-          <span class="badge badge-primary">{{duration}} mins</span>
-        </div>
 	</div>	
 </template>

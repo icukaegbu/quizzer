@@ -1,4 +1,9 @@
 <template name="testDetailsView">
+	<div>
+		{{#each tests}}
+			{{> testDetailsViewItem}}
+		{{/each}}
+	</div>
 	<!-- <div class="pricing">
 		<ul>
 			{{#each tests}}
@@ -6,9 +11,4 @@
 			{{/each}}
 		</ul>
 	</div> -->
-	<div>
-		{{#each tests}}
-			{{> testDetailsViewItem}}
-		{{/each}}
-	</div>
 </template>
