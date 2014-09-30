@@ -1,0 +1,77 @@
+<template name="createQuestion">
+	  <!-- ADD NOTIFICATION SYSTEM -->
+	  {{> notifications}}
+	  
+	 <div class="example">
+	    <h2 class="example-title">Questions</h2>
+	    <div class="row">
+	      <div class="col-md-3">
+	        <div class="panel panel-primary">
+
+              <div class="panel-heading">
+                <h3 class="panel-title">Create Question</h3>
+              </div>
+	          <div class="panel-body">
+	            <form class="main">			
+		        	<!-- <legend></legend> -->
+					<fieldset class="panel-content">
+	                    <label>Title</label>
+	                    <input type="text" placeholder="Test Title" name="title" class="form-control">
+
+	                    <label>Duration(In minutes)</label>
+	                    <input type="number" placeholder="Enter Test Duration" name="duration" class="form-control">
+
+	                    <label>Description</label>
+	                    <textarea name="description" class="form-control" rows="3"></textarea>
+
+                    	<label>Category</label>
+                    	{{> selectCategory}}
+
+                    	<label>Class</label>
+                    	{{> selectClass}}                   
+
+	                    <br/>
+
+	                    <div class="col-md-6">
+	                    	<input type="submit" value="Create" class=".submit btn btn-primary btn-block">
+	                    </div>
+	                    <div class="col-md-6">
+	                    	<a href="#" class="cancel btn btn-danger btn-block" >Cancel</a>
+	                    </div>
+	                    
+	                    <!-- <input type="submit" value="Cancel" class=".cancel"> -->
+	                    
+	                </fieldset>		 			
+				</form>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-md-9">
+	      	<!-- <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title">
+	                  <strong>Color Legend</strong>
+	                  <span class="label label-warning">Pending Tests</span>
+	                  <span class="label label-success">Completed Tests</span>
+	                  <span class="label label-danger">In-Progress Tests</span>
+                </div>
+              </div>
+              <div class="panel-body">
+                {{> testDetailsView}}
+              </div>
+            </div> -->
+
+            <div class="well">
+            	<strong>Color Legend</strong>
+	            <span class="label label-warning">Pending Tests</span>
+	            <span class="label label-success">Completed Tests</span>
+	            <span class="label label-danger">In-Progress Tests</span>
+            </div>
+
+            {{> testDetailsView}}
+
+	      	
+	      </div>
+	    </div>
+	  </div>
+</template>
