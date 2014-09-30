@@ -1,5 +1,5 @@
 Template.questionDetailsView.helpers({
 	questions: function () {
-		return TQuestions.find({}, {sort: {created: -1, title: -1}});
+		return Questions.find({}, {sort: {created: -1, title: -1}});
 	}
 });

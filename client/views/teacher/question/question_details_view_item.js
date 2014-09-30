@@ -13,13 +13,13 @@ Template.questionDetailsViewItem.helpers({
 	},
 
 	getStatusColor: function(){
-		if (this.status === 'pending'){
+		if (this.answer === 'A'){
 			return 'warning';
 		}
-		else if (this.status === 'completed'){
+		else if (this.answer === 'B'){
 			return 'success';
 		}
-		else if (this.status === 'in-progress'){
+		else if (this.answer === 'C'){
 			return 'danger';
 		}
 		else {
