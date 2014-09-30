@@ -6,69 +6,66 @@
 	    <h2 class="example-title">Questions</h2>
 	    <div class="row">
 	      <div class="col-md-3">
-	        <div class="panel panel-primary">
-
+	        <div class="panel panel-success">
               <div class="panel-heading">
                 <h3 class="panel-title">Create Question</h3>
               </div>
 	          <div class="panel-body">
 	            <form class="main">			
-		        	<!-- <legend></legend> -->
 					<fieldset class="panel-content">
-	                    <label>Title</label>
-	                    <input type="text" placeholder="Test Title" name="title" class="form-control">
+	                    <label>Question</label>
+	                    <textarea name="question" class="form-control" rows="3"></textarea>
 
-	                    <label>Duration(In minutes)</label>
-	                    <input type="number" placeholder="Enter Test Duration" name="duration" class="form-control">
-
-	                    <label>Description</label>
-	                    <textarea name="description" class="form-control" rows="3"></textarea>
-
-                    	<label>Category</label>
+                    	<label>Choose Category</label>
                     	{{> selectCategory}}
 
-                    	<label>Class</label>
-                    	{{> selectClass}}                   
+                    	<label>Choose Class</label>
+                    	{{> selectClass}}    
+                    	<hr />
+
+                    	<label>Enter Options</label>
+                    	<br />
+                    	<label>A</label>
+	                    <input type="text" placeholder="Test Title" name="optA" class="form-control">
+	                    <label>B</label>
+	                    <input type="text" placeholder="Test Title" name="optB" class="form-control">
+	                    <label>C</label>
+	                    <input type="text" placeholder="Test Title" name="optC" class="form-control">
+	                    <label>D</label>
+	                    <input type="text" placeholder="Test Title" name="optD" class="form-control">
+
+	                    <hr/>
+	                    <label>Choose Answer</label>
+	                    <select name="answer" class="form-control selecter_1"  data-selecter-options='{"cover":"true"}'>
+					    	<option value="N/A">No Answer</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+					    </select>               
 
 	                    <br/>
 
 	                    <div class="col-md-6">
-	                    	<input type="submit" value="Create" class=".submit btn btn-primary btn-block">
+	                    	<input type="submit" value="Create" class=".submit btn btn-success btn-block">
 	                    </div>
 	                    <div class="col-md-6">
 	                    	<a href="#" class="cancel btn btn-danger btn-block" >Cancel</a>
-	                    </div>
-	                    
-	                    <!-- <input type="submit" value="Cancel" class=".cancel"> -->
-	                    
+	                    </div>	                    
 	                </fieldset>		 			
 				</form>
 	          </div>
 	        </div>
 	      </div>
 	      <div class="col-md-9">
-	      	<!-- <div class="panel panel-default">
-              <div class="panel-heading">
-                <div class="panel-title">
-	                  <strong>Color Legend</strong>
-	                  <span class="label label-warning">Pending Tests</span>
-	                  <span class="label label-success">Completed Tests</span>
-	                  <span class="label label-danger">In-Progress Tests</span>
-                </div>
-              </div>
-              <div class="panel-body">
-                {{> testDetailsView}}
-              </div>
-            </div> -->
-
-            <div class="well">
+            <!-- <div class="well">
             	<strong>Color Legend</strong>
 	            <span class="label label-warning">Pending Tests</span>
 	            <span class="label label-success">Completed Tests</span>
 	            <span class="label label-danger">In-Progress Tests</span>
-            </div>
+            </div> -->
 
-            {{> testDetailsView}}
+            {{> questionDetailsView}}
 
 	      	
 	      </div>
