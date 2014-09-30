@@ -10,5 +10,20 @@ Template.testDetailsViewItem.helpers({
 
 	getClass: function(e){
 		return Classes.find({_id: this.aclass}).title;
+	},
+
+	getStatusColor: function(){
+		if (this.status === 'pending'){
+			return 'warning';
+		}
+		else if (this.status === 'completed'){
+			return 'success';
+		}
+		else if (this.status === 'in-progress'){
+			return 'danger';
+		}
+		else {
+			return 'info';
+		}
 	}
 });

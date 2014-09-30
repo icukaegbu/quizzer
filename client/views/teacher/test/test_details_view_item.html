@@ -1,9 +1,13 @@
 <template name="testDetailsViewItem">
 	<div class="col-md-3">
-		<div class="alert alert-warning alert-dismissable">
+		<div class="alert alert-{{getStatusColor}} alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
           <strong>{{title}}</strong> <br/>
-          <span class="badge badge-primary">{{duration}} mins</span>
+          <span class="badge badge-{{getStatusColor}}">{{duration}} mins</span>
+          <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>
+          <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
+          <!-- <button type="button" class="btn"><i class="glyphicon glyphicon-pencil"></i></button>
+          <button type="button" class="btn"><i class="glyphicon glyphicon-trash"></i></button> -->
         </div>
 		<!-- <li class="unit price-primary">
 			<div class="price-title">
