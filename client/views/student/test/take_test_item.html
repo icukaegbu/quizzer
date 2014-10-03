@@ -1,45 +1,48 @@
 <template name="takeTestItem">
 	<dd class="pos-{{getPosition}} clearfix"> <!-- HAVE A ROTATE FUNCTION THAT IS CALLED ON pos-{{rotate}} THAT ROTATES OVER right and left  -->
 	  <div class="circ"></div>
-	  <div class="time">{{question_num}}:</div>
+	  <div class="time">#{{question_num}}</div>
 	  <div class="events">
-		  <div class="pull-left">
-		  	  <!-- Icon that is toggled to show if a question has been answered or not -->
-			  <div class="events-object img-rounded">
-		  	  	<span class="glyphicon glyphicon-minus-sign"></span>
-		  	  </div>
+	  	  <div class="answered-question">
+		  		  <div class="pull-left">
+				  	  <!-- Icon that is toggled to show if a question has been answered or not -->
+					  <div class="events-object img-rounded">
+				  	  	<span class="glyphicon glyphicon-bookmark" id="toggle{{question_num}}"></span>
+				  	  </div>
+				  </div>
+				  <div class="events-body well" id="{{question_num}}">
+					  <h4 class="events-heading">{{question}}</h4>
+					  <!-- <p></p> -->
+					  <ul>
+					  	<li>
+					  		<!-- bind id and value to option value  -->
+					  		<div class="radio">
+			                  <input type="radio" id="{{optA}}" value="{{optA}}" name="{{question_num}}">
+			                  <label for="flat-radio-1">{{optA}}</label>
+			                </div>
+					  	</li>
+					  	<li>
+					  		<div class="radio">
+			                  <input type="radio" id="{{optB}}" value="{{optB}}" name="{{question_num}}">
+			                  <label for="flat-radio-1">{{optB}}</label>
+			                </div>
+					  	</li>
+					  	<li>
+					  		<div class="radio">
+			                  <input type="radio" id="{{optC}}" value="{{optC}}" name="{{question_num}}">
+			                  <label for="flat-radio-1">{{optC}}</label>
+			                </div>
+					  	</li>
+					  	<li>
+					  		<div class="radio">
+			                  <input type="radio" id="{{optD}}" value="{{optD}}" name="{{question_num}}">
+			                  <label for="flat-radio-1">{{optD}}</label>
+			                </div>
+					  	</li>
+					  </ul>
+				  </div>
 		  </div>
-		  <div class="events-body well">
-			  <h4 class="events-heading">{{question}}</h4>
-			  <!-- <p></p> -->
-			  <ul>
-			  	<li>
-			  		<!-- bind id and value to option value  -->
-			  		<div class="radio">
-	                  <input type="radio" id="{{optA}}" value="{{optA}}" name="rad1">
-	                  <label for="flat-radio-1">{{optA}}</label>
-	                </div>
-			  	</li>
-			  	<li>
-			  		<div class="radio">
-	                  <input type="radio" id="{{optB}}" value="{{optB}}" name="rad1">
-	                  <label for="flat-radio-1">{{optB}}</label>
-	                </div>
-			  	</li>
-			  	<li>
-			  		<div class="radio">
-	                  <input type="radio" id="{{optC}}" value="{{optC}}" name="rad1">
-	                  <label for="flat-radio-1">{{optC}}</label>
-	                </div>
-			  	</li>
-			  	<li>
-			  		<div class="radio">
-	                  <input type="radio" id="{{optD}}" value="{{optD}}" name="rad1">
-	                  <label for="flat-radio-1">{{optD}}</label>
-	                </div>
-			  	</li>
-			  </ul>
-		  </div>
+		  
 	  </div>
     </dd>
 </template>
