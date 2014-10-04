@@ -24,7 +24,7 @@ Template.createStudent.events({
 
 			$(e.target).find('[name=name]').val('');
 			$(e.target).find('[name=email]').val('');
-			$(e.target).find('[name=select_class]').val('');
+			$(e.target).find('[name=select_class]').val('N/A');
 		}
 		else{
 			Notifications.error('Save Unsuccessful', 'Could not save Student; Name/Email/Class is empty ');
