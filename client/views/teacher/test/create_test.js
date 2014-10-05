@@ -19,7 +19,6 @@ Template.createTest.events({
 			//as the Test and assign their id's to Tests
 			var questions = Questions.find({aclass: aclass, category: category}, {fields: {_id: 1, question: 1}}).fetch();
 
-
 			//create an instance of the Test and save
 			test = {
 				title: title,
