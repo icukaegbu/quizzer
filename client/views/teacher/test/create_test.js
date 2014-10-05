@@ -15,6 +15,11 @@ Template.createTest.events({
 
 		//if any field is empty, dont save
 		if ( title && duration ){
+			//find all questions who have the same category and class
+			//as the Test and assign their id's to Tests
+			var questions = Questions.find({aclass: aclass, category: category}, {fields: {_id: 1, question: 1}}).fetch();
+
+
 			//create an instance of the Test and save
 			test = {
 				title: title,
@@ -25,17 +30,12 @@ Template.createTest.events({
 				bgColor: '',
 				category: category,
 				aclass: aclass,
-				questions: [] //create an empty array to hold all the questions
+				questions: questions //create an empty array to hold all the questions
 			}
 
 			isSave = true;
 
 			id = Tests.insert(test);
-
-			//if insert was successful, find all questions who have the same category and class
-			//as the Test and assign their id's to Tests
-			var questions = Questions.find({aclass: aclass, category: category})
-			console.log(questions);
 
 			//display notification
       		Notifications.info('Save Successful', 'Successfully added Test: ');
