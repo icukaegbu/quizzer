@@ -43,10 +43,13 @@
 	      <div class="col-md-4">
 	        <div class="list-group">
 	          <div class="list-group-item list-group-item-danger">
-	          	  <h4 class="list-group-item-heading">Students for [{{title}}] | # {{getStudentsCount}}</h4>
+	          	  <h4 class="list-group-item-heading">Students for [{{title}}] | # {{getStudentCount aclass}}</h4>
 	          </div>
-	          {{#each inProgressTests}}
-	          	{{> testListViewItem}}
+	          {{#each students aclass}}
+	          	<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{name}}</span>
+				  	<!-- <span class="badge badge-{{badgeColor}}">{{getAnswer}}</span> -->  	
+				</span>
 	          {{/each}}
 	        </div>
 	      </div>
