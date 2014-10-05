@@ -1,5 +1,5 @@
 <template name="showSingleTest">
-	<div class="row">
+	<!-- <div class="row">
 		<p>
 			<label>Title: </label>{{title}}
 		</p>
@@ -12,5 +12,57 @@
 		<p>
 			<label># Questions: </label>{{getQuestions}}
 		</p>
-	</div>
+	</div> -->
+	  <div class="example">
+	    <h2 class="example-title">Tests</h2>
+	    <div class="row">
+	      <div class="col-md-3">
+	        <div class="list-group">
+	          <div class="list-group-item list-group-item-primary">
+	          	  <h4 class="list-group-item-heading">Test Details</h4>
+	          </div>
+
+				<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{title}}</span>
+				  	<span class="badge badge-danger">Title</span>  	
+				</span>
+				<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{getCategory category}}</span>
+				  	<span class="badge badge-info">Category</span>  	
+				</span>
+				<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{getClass aclass}}</span>
+				  	<span class="badge badge-warning">Class</span>  	
+				</span>
+				<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{questions.length}}</span>
+				  	<span class="badge badge-success"># Questions</span>  	
+				</span>
+	        </div>
+	      </div>
+	      <div class="col-md-5">
+	        <div class="list-group">
+	          <div class="list-group-item list-group-item-success">
+	          	  <h4 class="list-group-item-heading">Questions for [{{title}}] | # {{questions.length}}</h4>
+	          </div>
+	          {{#each questions}}
+	          	<span class="list-group-item">
+				  	<span class="list-group-item-heading">{{question}}</span>
+				  	<!-- <span class="badge badge-{{badgeColor}}">{{getAnswer}}</span> -->  	
+				</span>
+	          {{/each}}
+	        </div>
+	      </div>
+	      <div class="col-md-4">
+	        <div class="list-group">
+	          <div class="list-group-item list-group-item-danger">
+	          	  <h4 class="list-group-item-heading">Students for [{{title}}] | # {{getStudentsCount}}</h4>
+	          </div>
+	          {{#each inProgressTests}}
+	          	{{> testListViewItem}}
+	          {{/each}}
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 </template>
