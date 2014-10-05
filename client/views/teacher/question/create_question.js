@@ -36,10 +36,10 @@ Template.createQuestion.events({
 			//if question is saved, find all Tests that have the same category and class
 			//and add the question to their questions array
 			var tests = Tests.find({aclass: aclass, category: category});
-			console.log("Array has elements: "+tests.count());
-			tests.forEach(function (test) {
-				console.log(test.questions);
-			});
+			// console.log("Array has elements: "+tests.count());
+			// tests.forEach(function (test) {
+			// 	console.log(test.questions);
+			// });
 
 			tests.forEach(function (test) {
 				//add the id of the question to its question array
@@ -48,8 +48,8 @@ Template.createQuestion.events({
 				//persist to the DB; not optimal implementation???
 				Tests.update(test._id, {$set: {questions: test.questions}});
 				
-				console.log(test.questions);
-				console.log(id);
+				// console.log(test.questions);
+				// console.log(id);
 			});
 
 
