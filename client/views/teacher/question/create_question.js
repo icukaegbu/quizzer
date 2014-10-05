@@ -33,6 +33,15 @@ Template.createQuestion.events({
 
 			id = Questions.insert(aQuestion);
 
+			//if question is saved, find all Tests that have the same category and class
+			//and add the question to their questions array
+			var tests = Tests.find({aclass: aclass, category: category});
+
+			tests.forEach(function (test) {
+				//add the id of the question to its question array
+				test.questions.push(id);
+			});
+
 			//display notification
       		Notifications.info('Save Successful', 'Successfully added Question');
 
