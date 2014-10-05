@@ -36,6 +36,8 @@ Template.createTest.events({
 
 			id = Tests.insert(test);
 
+			// console.log(questions);
+
 			//display notification
       		Notifications.info('Save Successful', 'Successfully added Test: ');
 
