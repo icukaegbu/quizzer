@@ -17,7 +17,7 @@ Template.createQuestion.events({
 
 		//if any field is empty, dont save
 		if ( question && optA && optB && answer ){
-			//create an instance of the Test and save
+			//create an instance of the question and save
 			aQuestion = {
 				question: question,
 				optA: optA,
@@ -43,14 +43,21 @@ Template.createQuestion.events({
 
 			tests.forEach(function (test) {
 				//add the id of the question to its question array
-				test.questions.push(id);
-
-				//persist to the DB; not optimal implementation???
-				Tests.update(test._id, {$set: {questions: test.questions}});
+				Tests.update(test._id, {$addToSet: {questions: {_id: id, question: question}}});
+				// Tests.update(test._id, {$push: {questions: {_id: id, question: question}}});
 				
-				// console.log(test.questions);
+				//persist to the DB; not optimal implementation???
+				// test.questions.push(id);
+				// Tests.update(test._id, {$set: {questions: test.questions}});					
 				// console.log(id);
+				// console.log(test.questions);
 			});
+
+			//code to update multiple in-place. USE WHEN CHANGED TO METHODS FOR SERVER-SIDE
+			//add the id to the array of element that matches
+			// Tests.update({aclass: aclass, category: category},
+			// 			{$addToSet: {questions: id}},
+			// 			{multi: true});
 
 
 			//display notification
