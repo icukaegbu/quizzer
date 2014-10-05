@@ -25,6 +25,10 @@ Template.testDetailsViewItem.helpers({
 		else {
 			return 'info';
 		}
+	},
+
+	getQuestionsLength: function(){
+		return this.questions ? this.questions.length : 0;
 	}
 });
 
