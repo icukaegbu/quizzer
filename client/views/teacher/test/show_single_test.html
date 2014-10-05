@@ -1,20 +1,6 @@
 <template name="showSingleTest">
-	<!-- <div class="row">
-		<p>
-			<label>Title: </label>{{title}}
-		</p>
-		<p>
-			<label>Category: </label>{{getCategory category}}
-		</p>
-		<p>
-			<label>Class: </label>{{getClass aclass}}
-		</p>
-		<p>
-			<label># Questions: </label>{{getQuestions}}
-		</p>
-	</div> -->
 	  <div class="example">
-	    <h2 class="example-title">Tests</h2>
+	    <h2 class="example-title">Test Detail</h2>
 	    <div class="row">
 	      <div class="col-md-3">
 	        <div class="list-group">
@@ -39,6 +25,7 @@
 				  	<span class="badge badge-success"># Questions</span>  	
 				</span>
 	        </div>
+	        <a href="{{pathFor 'createTest'}}" class="btn btn-danger">Back</a>
 	      </div>
 	      <div class="col-md-5">
 	        <div class="list-group">
