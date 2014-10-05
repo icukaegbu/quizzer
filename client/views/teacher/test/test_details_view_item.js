@@ -1,9 +1,9 @@
 Template.testDetailsViewItem.helpers({
 	getCategory: function (e) {
-		console.log(e);
+		// console.log(e);
 		
 		var t = Categories.find({_id: this.category}).title;
-		console.log(t);
+		// console.log(t);
 
 		return t;
 	},
@@ -24,6 +24,21 @@ Template.testDetailsViewItem.helpers({
 		}
 		else {
 			return 'info';
+		}
+	}
+});
+
+Template.testDetailsViewItem.events({
+	'click .glyphicon-trash': function (e) {
+		e.preventDefault();
+
+		if(confirm("Delete this Test?")) {
+			var currentTestId = this._id;
+			Tests.remove(currentTestId);
+			Notifications.success('Delete Successful', 'Successfully deleted Test');
+		}
+		else{
+			Notifications.error('Delete Unsuccessful', 'Delete failed');
 		}
 	}
 });

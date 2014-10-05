@@ -24,12 +24,18 @@ Template.createTest.events({
 				status: 'pending',  //every test starts off ith a pending status
 				bgColor: '',
 				category: category,
-				aclass: aclass
+				aclass: aclass,
+				questions: [] //create an empty array to hold all the questions
 			}
 
 			isSave = true;
 
 			id = Tests.insert(test);
+
+			//if insert was successful, find all questions who have the same category and class
+			//as the Test and assign their id's to Tests
+			var questions = Questions.find({aclass: aclass, category: category})
+			console.log(questions);
 
 			//display notification
       		Notifications.info('Save Successful', 'Successfully added Test: ');

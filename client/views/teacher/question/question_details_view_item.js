@@ -27,3 +27,18 @@ Template.questionDetailsViewItem.helpers({
 		}
 	}
 });
+
+Template.questionDetailsViewItem.events({
+	'click .glyphicon-trash': function (e) {
+		e.preventDefault();
+
+		if(confirm("Delete this Question?")) {
+			var currentQuestionId = this._id;
+			Questions.remove(currentQuestionId);
+			Notifications.success('Delete Successful', 'Successfully deleted Question');
+		}
+		else{
+			Notifications.error('Delete Unsuccessful', 'Delete failed');
+		}
+	}
+});
