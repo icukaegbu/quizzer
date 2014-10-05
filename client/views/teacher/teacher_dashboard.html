@@ -2,41 +2,39 @@
   <!-- {{> loginMenu}} -->
 
   <div class="example">
-        <h2 class="example-title">Tests</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="list-group">
-              <div class="list-group-item list-group-item-primary">
-              	  <h4 class="list-group-item-heading">Pending</h4>
-              </div>
-              <!-- {{> testListView}} -->
-              {{#each pendingTests}}
-              	{{> testListViewItem}}
-              {{/each}}
-            </div>
+    <h2 class="example-title">Tests</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-primary">
+          	  <h4 class="list-group-item-heading">Pending</h4>
           </div>
-          <div class="col-md-4">
-            <div class="list-group">
-              <div class="list-group-item list-group-item-success">
-              	  <h4 class="list-group-item-heading">Completed</h4>
-              </div>
-              {{#each completedTests}}
-              	{{> testListViewItem}}
-              {{/each}}
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="list-group">
-              <div class="list-group-item list-group-item-danger">
-              	  <h4 class="list-group-item-heading">In-Progress</h4>
-              </div>
-              {{#each inProgressTests}}
-              	{{> testListViewItem}}
-              {{/each}}
-            </div>
-          </div>
+          <!-- {{> testListView}} -->
+          {{#each pendingTests}}
+          	{{> testListViewItem}}
+          {{/each}}
         </div>
       </div>
-
-    
+      <div class="col-md-4">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-success">
+          	  <h4 class="list-group-item-heading">Completed</h4>
+          </div>
+          {{#each completedTests}}
+          	{{> testListViewItem}}
+          {{/each}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-danger">
+          	  <h4 class="list-group-item-heading">In-Progress</h4>
+          </div>
+          {{#each inProgressTests}}
+          	{{> testListViewItem}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>    
 </template>
