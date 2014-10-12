@@ -8,7 +8,7 @@
           <span class="badge badge-{{getStatusColor}}">{{getClass aclass}}</span> 
           <span class="badge badge-{{getStatusColor}}">{{getCategory category}}</span>
           <br /><br />
-          {{#if checkStatus}}
+          {{#if checkPendingStatus}}
           	<a href="#"><i class="glyphicon glyphicon-play" data-toggle="tooltip" data-placement="top" title="Start Test"></i></a> |
           {{/if}}
           <a href="{{pathFor 'showSingleTest'}}"><i class="glyphicon glyphicon-th-list" data-toggle="tooltip" data-placement="top" title="View Test Details"></i></a> | 

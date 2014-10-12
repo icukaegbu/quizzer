@@ -18,7 +18,7 @@ Template.testDetailsViewItem.helpers({
 		return this.questions ? this.questions.length : 0;
 	},
 
-	checkStatus: function(){
+	checkPendingStatus: function(){
 		return this.status === 'pending';
 	}
 });
