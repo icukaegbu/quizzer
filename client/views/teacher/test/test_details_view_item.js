@@ -35,17 +35,18 @@ Template.testDetailsViewItem.events({
 		else{
 			Notifications.error('Delete Unsuccessful', 'Delete failed');
 		}
-	},
-
-	//event to handle starting a Test
-	'click .glyphicon-play': function(e){
-		e.preventDefault();
-
-		//create an instance of TestResult for all students
-
-		//start the timer for the Test
-
-		//Route to the Administer-Test Screen
-
 	}
+	// ,
+
+	// //event to handle starting a Test
+	// 'click .glyphicon-play': function(e){
+	// 	e.preventDefault();
+
+	// 	//create an instance of TestResult for all students
+
+	// 	//start the timer for the Test
+
+	// 	//Route to the Administer-Test Screen
+
+	// }
 });
