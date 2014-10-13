@@ -1,9 +1,10 @@
 Template.showSingleTest.helpers({
-	students: function (classId) {
-		return Students.find({aclass: classId});
-	},
+	// students: function (classId) {
+	// 	return Students.find({aclass: classId});
+	// },
 
-	getStudentCount: function(classId){
-		return Students.find({aclass: classId}).count();
-	}
+	// getStudentCount: function(classId){
+	// 	//return Students.find({aclass: classId}).count();
+	// 	return getStudents(classId).count();
+	// }
 });

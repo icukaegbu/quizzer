@@ -12,3 +12,11 @@ Template.registerHelper('getCategory', function(id){
 Template.registerHelper('getClass', function(id){
 	return Classes.findOne({_id: id}, {fields: {title: 1}}).title;
 })
+
+Template.registerHelper('getStudents', function(classId){
+	return Students.find({aclass: classId});
+})
+
+Template.registerHelper('getStudentCount', function(classId){
+	return Students.find({aclass: classId}).count();
+})
