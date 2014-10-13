@@ -1,0 +1,35 @@
+<template name="administerTestStudentView">
+	<li class="unit price-primary">
+		<div class="price-title">
+			<h4>{{name}}</h4>
+			<p>Test title / Class</p>
+		</div>
+
+		<!-- for each question, display as a slide here in the selecter  -->
+		<!-- {{#each results}}
+			{{> administerTestStudentViewResult}}
+		{{/each}} -->
+		<div id="administer-test" class="carousel slide" data-ride="carousel">
+		    <!-- <ol class="carousel-indicators">
+		      <li data-target="#administer-test" data-slide-to="0" class="active"></li>
+		      <li data-target="#administer-test" data-slide-to="1"></li>
+		      <li data-target="#administer-test" data-slide-to="2"></li>
+		    </ol> -->
+		    <div class="carousel-inner">
+		      <div class="item active">{{> administerTestStudentViewResult}}</div>
+		      <div class="item">{{> administerTestStudentViewResult}}</div>
+		      <div class="item">{{> administerTestStudentViewResult}}</div>
+		    </div>
+		    <a class="left carousel-control" href="#administer-test" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left"></span>
+		    </a>
+		    <a class="right carousel-control" href="#administer-test" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right"></span>
+		    </a>
+		</div>	
+		
+		<div class="price-foot">
+			<button type="button" class="btn btn-primary">ProgressBar (x in Total Questions}</button>
+		</div>
+	</li>
+</template>

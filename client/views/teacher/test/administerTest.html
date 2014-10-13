@@ -1,0 +1,12 @@
+<template name="administerTest">
+	<!-- retrieve all students who belong to this class -->
+	<div class="col-md-8">
+		<div class="pricing">
+			<ul>
+				{{#each getStudents aclass}}
+					{{> administerTestStudentView}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</template>
