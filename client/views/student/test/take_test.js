@@ -7,7 +7,7 @@ Template.takeTest.helpers({
 		//var questions = Questions.find({}, {sort: {created: -1, title: -1}}).fetch();
 
 		//use the retrieved Test to load questions
-		console.log(this)
+		//console.log(this)
 		var questions = Questions.find({aclass: this.aclass, category: this.category}, 
 									   {sort: {created: -1, title: -1}}).fetch();
 
