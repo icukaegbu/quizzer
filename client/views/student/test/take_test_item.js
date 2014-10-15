@@ -28,7 +28,8 @@ Template.takeTestItem.events({
 
 			console.log(test_result);
 
-			// var id = TestResult.insert(test_result);
+			// var id = TestResult.update(student_id, test_id, {$addToSet/push: {test_result});
+			//TestResults.update(test._id, {$addToSet: {questions: {_id: id, question: question}}});
 
 		}
 	}

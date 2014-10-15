@@ -1,0 +1,33 @@
+<template name="student_dashboard">
+  <div class="example">
+    <h2 class="example-title">Students</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-primary">
+          	  <h4 class="list-group-item-heading">Student List</h4>
+          </div>
+          <!-- {{> testListView}} -->
+          {{#each getStudents}}
+	          <a href="#" class="list-group-item">
+				  <h4 class="list-group-item-heading">{{name}}</h4>
+				  <span class="badge badge-danger">{{getClass}}</span>	  	
+			  </a>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="well">
+        	<strong>Color Legend</strong>
+            <span class="label label-warning">Pending Tests</span>
+            <span class="label label-success">Completed Tests</span>
+            <span class="label label-danger">In-Progress Tests</span>
+        </div>
+        {{> testDetailsView}}      	
+      </div>
+      
+    </div>
+  </div> 
+  
+</template>
