@@ -72,7 +72,8 @@ Template.testDetailsViewItem.events({
 				test_title: test.title,
 				student_id: student._id,
 				student_name: student.name,
-				test_results: test.questions,
+				// test_results: test.questions,
+				test_results: [],
 				created: new Date().getTime()
 			}
 			console.log('Inserting');

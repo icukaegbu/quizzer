@@ -1,4 +1,30 @@
 <template name="administerTestStudentView">
+	<div class=" col-md-3">
+		<div class="panel panel-default">
+	      <div class="panel-heading">{{student_name}} | {{test_title}}</div>
+	      <div class="panel-body">
+	        <ul class="media-list">
+	        	<!-- only display if test_results return an array; if empty, dont display -->
+	      		{{#each test_results}}
+			      	{{> administerTestStudentViewResult}}
+			    {{/each}}
+	      	</ul> 
+	      </div>
+	      <!-- <ul class="list-group">
+	        <li class="list-group-item">Cras justo odio</li>
+	        <li class="list-group-item">Dapibus ac facilisis in</li>
+	        <li class="list-group-item">Morbi leo risus</li>
+	        <li class="list-group-item">Porta ac consectetur ac</li>
+	        <li class="list-group-item">Vestibulum at eros</li>
+	      </ul> -->                
+	    </div>
+	</div>
+		
+</template>
+
+
+
+<template name="NONE_REPLACE_LATER">
 	<li class="unit price-primary">
 		<div class="price-title">
 			<h4>{{student_name}}</h4>
@@ -35,3 +61,4 @@
 		</div>
 	</li>
 </template>
+

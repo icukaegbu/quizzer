@@ -1,5 +1,5 @@
-<template name="administerTest">
-	<!-- retrieve all students who belong to this class -->
+<!-- <template name="administerTest">
+	//retrieve all students who belong to this class
 	<div class="col-md-8">
 		<div class="pricing">
 			<ul>
@@ -8,5 +8,21 @@
 				{{/each}}
 			</ul>
 		</div>
+	</div>
+</template> -->
+
+<template name="administerTest">
+	<div class="example">
+	    <div class="row">
+	      <div class="col-md-8">
+	        <h2 class="example-title">Students for Test Title</h2>
+	        
+	        {{#each registerStudents}}
+				{{> administerTestStudentView}}
+			{{/each}}
+
+	        
+	      </div>
+	    </div>
 	</div>
 </template>
