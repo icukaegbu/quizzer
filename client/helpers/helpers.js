@@ -17,6 +17,10 @@ Template.registerHelper('getStudents', function(classId){
 	return Students.find({aclass: classId});
 })
 
+Template.registerHelper('getAllStudents', function(){
+	return Students.find();
+})
+
 Template.registerHelper('getStudentCount', function(classId){
 	return Students.find({aclass: classId}).count();
 })
