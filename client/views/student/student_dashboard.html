@@ -23,7 +23,7 @@
         </div>
         <!-- {{#if tests}} -->
 	        {{#each studentTests}}
-	        	{{> testDetailsViewItem}}    
+	        	{{> startTestDetailsView}}    
 	        {{/each}} 
 	    <!-- {{/if}}  -->	
       </div>
@@ -31,4 +31,20 @@
     </div>
   </div> 
   
+</template>
+
+
+<template name="startTestDetailsView">
+	<div class="col-md-3">
+		<div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <strong>{{title}}</strong> <br/>
+          <span class="badge badge-warning">{{duration}} mins</span>
+          <span class="badge badge-warning">{{getQuestionsLength}} questions</span><br />
+          <span class="badge badge-warning">{{getClass aclass}}</span> 
+          <span class="badge badge-warning">{{getCategory category}}</span>
+          <br /><br />
+          <a href="{{pathFor 'takeTest'}}"><i class="glyphicon glyphicon-play" data-toggle="tooltip" data-placement="top" title="Start Test"></i></a>
+        </div>
+	</div>	
 </template>
