@@ -3,6 +3,7 @@ Template.studentDashboard.events({
 		//store the class and student id in Session, use to retrieve data
 		Session.set('studentClassId', this.aclass);
 		Session.set('studentName', this.name);
+		Session.set('studentId', this._id);
 
 		//return a list of all pending tests for this student
 		// console.log(e.currentTarget);
@@ -27,5 +28,13 @@ Template.studentDashboard.helpers({
 
 	getStudentName: function(){
 		return Session.get('studentName');
+	}
+});
+
+Template.startTestDetailsView.events({
+	'click .glyphicon-play': function (e) {
+		//store the test id in Session, use to retrieve data
+		Session.set('testId', this._id);
+		Session.set('testTitle', this.title);
 	}
 });

@@ -17,8 +17,8 @@ Template.takeTestItem.events({
 			//save the question so that the answer is pushed to the server screen
 			//create an instance of TestResult and save to the DB
 			test_result = {
-				// student_id: '',
-				// test_id: ,
+				student_id: Session.get('studentId'),   //get from Session
+				test_id: Session.get('testId'),        //get from Session
 				question_id: this._id,
 				question_num: this.question_num,
 				selected_option: e.target.id,
@@ -45,5 +45,9 @@ Template.takeTestItem.helpers({
 		else {
 			return "left";
 		}
+	},
+
+	getTestTitle: function(){
+		return Session.get('testTitle');
 	}
 });
