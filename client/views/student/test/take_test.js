@@ -19,5 +19,9 @@ Template.takeTest.helpers({
 		});
 
 		return questions;
+	},
+
+	getTestTitle: function(){
+		return Session.get('testTitle');
 	}
 });

@@ -1,6 +1,8 @@
 Template.takeTestItem.events({
 	'change .radio': function (e, template) {
 		var t = template;
+		var testId = Session.get('testId');
+		var studentId = Session.get('studentId');
 		var test_result = null;
 
 		//if it has not been clicked before, set the class else leave it
@@ -17,18 +19,24 @@ Template.takeTestItem.events({
 			//save the question so that the answer is pushed to the server screen
 			//create an instance of TestResult and save to the DB
 			test_result = {
-				student_id: Session.get('studentId'),   //get from Session
-				test_id: Session.get('testId'),        //get from Session
+				student_id: studentId,   //get from Session
+				test_id: testId,        //get from Session
 				question_id: this._id,
 				question_num: this.question_num,
 				selected_option: e.target.id,
+				correct_answer: this.answer,
 			 	passed: e.target.id === this.answer,
 				submitted: new Date().getTime()
 			}
 
 			console.log(test_result);
 
-			// var id = TestResult.update(student_id, test_id, {$addToSet/push: {test_result});
+			//find TestResults ID and use to perform update
+			var resultId = TestResults.findOne({student_id: studentId, test_id: testId})._id;
+
+			var id = TestResults.update(resultId, {$push: {test_results: test_result}});
+
+			console.log(id);
 			//TestResults.update(test._id, {$addToSet: {questions: {_id: id, question: question}}});
 
 		}
@@ -45,9 +53,5 @@ Template.takeTestItem.helpers({
 		else {
 			return "left";
 		}
-	},
-
-	getTestTitle: function(){
-		return Session.get('testTitle');
 	}
 });
